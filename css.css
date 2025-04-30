@@ -41,7 +41,7 @@ body {
 }
 #menu {
     display: flex;    /* el menú és un contenidor de tipus flex */
-    height: 5vmax;
+    height: 4vmax;
 }
 #menu i{
     flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
