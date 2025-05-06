@@ -28,19 +28,6 @@ body {
     text-align: center;
     margin-bottom: 100vh;
 }
-
-.seccio {
-    flex: 1;
-    display: none;
-}
-
-#seccio_1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4vmax;
-}
-
 #menu {
     height: 4vmax;
 }
@@ -56,4 +43,18 @@ body {
     cursor: pointer;
 
 }
+
+.seccio {
+    flex: 1;
+    display: none;
+}
+
+#seccio_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmax;
+}
+
+
 
