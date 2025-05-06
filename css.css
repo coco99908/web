@@ -22,6 +22,11 @@ body {
     color: white;
     padding: 1vh 0;
 }
+#titulo{
+    font-size: 4vmax;
+    text-align: center;
+    margin-bottom: 1vh;
+}
 
 .seccio {
     flex: 1;
@@ -29,11 +34,15 @@ body {
 }
 
 #seccio_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4vmax;
-    text-align: center;
-    margin-bottom: 1vh;
 }
 
+#menu {
+    height: 4vmax;
+}
 #menu {
     display: flex;
     width: 100%;
@@ -41,13 +50,14 @@ body {
     height: 5vmax;
 }
 #menu i{
-    flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
-    display: flex;    /* contenidor flex on centrar-hi la icona */
-    justify-content: center;
-    align-items: center;
+    font-size: 4vmax;
     color: white;
     background-color: purple;
-    font-size: 4vmax;
-    cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+
 }
 
