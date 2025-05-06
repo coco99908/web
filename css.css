@@ -48,7 +48,7 @@ body {
     display: flex;    /* contenidor flex on centrar-hi la icona */
     justify-content: center;
     align-items: center;
-    color: purple;
+    color: white;
     background-color: purple;
     font-size: 4vmax;
     cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
