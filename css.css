@@ -35,14 +35,12 @@ body {
     font-size: 4vmax;
 }
 
-#menu {
-    height: 4vmax;
-}
+
 #menu {
     display: flex;    /* el menú és un contenidor de tipus flex */
     height: 4vmax;
 }
-#menu i{
+#menu {
     flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
     display: flex;    /* contenidor flex on centrar-hi la icona */
     justify-content: center;
