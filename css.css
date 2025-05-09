@@ -1,19 +1,3 @@
-html {
-    height: -webkit-fill-available;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    min-height: 100svh;
-    min-height: -webkit-fill-available;
-    margin: 0px;
-    font-family: sans-serif;
-    background-color: #d9d7fc;
-}
-
 #superior {
     display: flex;
     height: 8vmax;
@@ -24,69 +8,34 @@ body {
     background-color: #521761;
 }
 
-.seccio {
+/* Botonera debajo del título */
+#botonera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vmax;
+    background-color: #d4c6e2;
+}
+
+#botonera button {
     flex: 1;
-    display: none;
+    font-size: 2vmax;
+    padding: 1vmax;
+    margin: 0;
+    height: 100%;
+    border: none;
+    background-color: #8e7cc3;
+    color: white;
+    cursor: pointer;
 }
 
-#seccio_1 {
-    justify-content: center;
-    align-items: center;
-    font-size: 4vmax;
+#botonera button:hover {
+    background-color: #7657a6;
 }
 
-
-#menu {
-    display: flex;    /* el menú és un contenidor de tipus flex */
-    height: 4vmax;
-}
-#menu {
-    flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
-    display: flex;    /* contenidor flex on centrar-hi la icona */
-    justify-content: center;
-    align-items: center;
-    color: purple;
-    font-size: 4vmax;
-    cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
-    height:4vmax;
-}
-#seccio_0 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 4vmax;
-}
-#credencials {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+/* Contenido */
+#contenido {
+    padding: 2vmax;
     font-size: 3vmax;
-    margin: 5vmin;
-}
-#credencials div {    /* els 2 <div> dins de credencials */
-    margin-bottom: 1vmin;
-}
-#credencials input {    /* els 2 quadres de text dins de credencials */
-    max-width: 20vmax;    /* es limita l'espai que ocupen els quadres de text */
-    font-size: 3vmax;
-}
-#botons_sessio {
-    display: flex;
-    align-items: center;
-}
-#botons_sessio button {    /* els 2 botons dins de botons_sessio */
-    font-size: 3vmax;
-    padding: 2vmin;
-    margin: 1vmin;
-}
-@media (orientation: landscape) {
-    body {
-        flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
-    }
-    #menu {
-        flex-direction: column;
-        width: 8vmax;
-        height: auto;    /* sobreescriu la declaració height: 8vmax; */
-    }
+    text-align: center;
 }
