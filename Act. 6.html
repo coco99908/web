@@ -14,11 +14,7 @@
 
     while (intents < max)
     {
-      const resposta = prompt("Endevina el número entre 1 i 100 (intents restants: " + (max - intents) + "):");
-      if (resposta === null) {
-        alert("Has cancel·lat el joc.");
-        break;
-      }
+      const resposta = prompt("Introdueix un número entre 1 i 100. Tens " + (max - intents) + " intents restants.");
       const numero = parseInt(resposta, 10);
       intents++;
 
