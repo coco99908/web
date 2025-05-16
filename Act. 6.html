@@ -9,33 +9,29 @@
   <script>
     const numeroSecret = Math.floor(Math.random() * 100) + 1;
     let intents = 0;
-    const maxIntents = 10;
+    const max = 10;
     let encertat = false;
 
-    while (intents < maxIntents && !encertat) {
-      const entrada = prompt("Introdueix el teu número (entre 1 i 100): ");
-      const numero = parseInt(entrada);
+    while (intents < max)
+    {
+      const resposta = prompt("Endevina el número entre 1 i 100 (intents restants: " + (max - intents) + "):");
+      if (resposta === null) {
+        alert("Has cancel·lat el joc.");
+        break;
+      }
+      const numero = parseInt(resposta, 10);
+      intents++;
 
-      if (isNaN(numero) || numero < 1 || numero > 100) {
-    alert("Si us plau, introdueix un número vàlid entre 1 i 100.");
-    continue;
-  }
-
-  intents++;
-
-  if (numero === numeroSecret) {
-    alert(`Enhorabona! Has encertat el número en ${intents} intent(s).`);
-    encertat = true;
-  } else if (numero < numeroSecret) {
-    alert("El número secret és més gran.");
-  } else {
-    alert("El número secret és més petit.");
-  }
-}
-
-if (!encertat) {
-  alert(`Has esgotat els ${maxIntents} intents. El número era ${numeroSecret}.`);
-}
+      if (numero === numeroSecret) {
+        alert("Felicitats!🍅 Has encertat el número secret: " + numeroSecret);
+        encertat = true;
+        break;
+      } else if (numero < numeroSecret) {
+        alert("El número secret és més gran.⬆️");
+      } else {
+        alert("El número secret és més petit.⬇️");
+      }
+    }
     </script>
 </body>
 </html>
