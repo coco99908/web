@@ -42,6 +42,22 @@
     font-family: sans-serif;
     border-radius: 1vmax;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.modelos {
+    display: flex;
+    justify-content: center;
+    gap: 4vmax;
+    flex-wrap: wrap; /* Per fer-les responsives si l'espai no n’hi ha prou */
+}
 
+.modelo {
+    text-align: center;
+    max-width: 40vmax;
+}
 
+.modelo img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1vmax;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
