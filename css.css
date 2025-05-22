@@ -1,6 +1,6 @@
 #superior {
     display: flex;
-    height: 5vmax;
+    height: 7vmax;
     justify-content: center;
     align-items: center;
     font-size: 4vmax;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6vmax;
+    height: 5vmax;
     background-color: #cba0f7;
 }
 
