@@ -62,28 +62,49 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     object-fit: cover;
 }
-#producte {
-            padding: 2vmax;
-            text-align: center;
+ #producte {
+            display: flex;
+            gap: 4vmax;
+            padding: 4vmax;
             font-family: sans-serif;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
 
-        #producte img {
-            width: 30vmax;
-            height: 20vmax;
+        .imatge {
+            flex: 1 1 40%;
+        }
+
+        .imatge img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 1vmax;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
+        .info {
+            flex: 1 1 50%;
+        }
+
+        .info h1 {
+            font-size: 3vmax;
+            margin-bottom: 1vmax;
+        }
+
         .preu {
-            font-size: 2vmax;
-            margin-top: 1vmax;
+            font-size: 2.5vmax;
             color: #521761;
+            margin-bottom: 1vmax;
+        }
+
+        .descripcio {
+            font-size: 1.5vmax;
+            margin-bottom: 2vmax;
         }
 
         .afegir {
-            margin-top: 2vmax;
             padding: 1vmax 2vmax;
             font-size: 1.5vmax;
             background-color: #8e7cc3;
