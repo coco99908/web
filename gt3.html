@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Kukirin G2</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <div id="producte">
+        <div class="imatge">
+            <img src="https://www.imoveblue.es/7697-large_default/segway-gt3.jpg" alt="Segway Ninebot GT3 E">
+        </div>
+        <div class="info">
+            <h1>Segway Ninebot GT3 E</h1>
+            <p class="preu">1449,00 €</p>
+            <h2>Característiques</h2>
+            <ul>
+                <li>Permés a major de 18 anys</li>
+                <li>Motor: 2400W</li>
+                <li>Velocitat màxima: 25 km/h</li>
+                <li>Autonomia: 75 km</li>
+                <li>Batería: 899Wh 46.8Ah</li>
+                <li>Pantalla LCD</li>
+                <li>Suspensió doble</li>
+                <li>Llums davanteres i traseres</li>
+                <li>Disseny plegable</li>
+             </ul>
+            <button class="afegir" onclick="afegirAlCarreto()">Afegir al carretó</button>
+            <div class="missatge" id="missatge"></div>
+        </div>
+    </div>
+    <script>
+        function afegirAlCarreto() {
+            const producte = {
+                nom: "Segway Ninebot E3 E",
+                preu: 1449.00,
+                imatge: "https://www.imoveblue.es/7697-large_default/segway-gt3.jpg"
+            };
+
+            let carreto = JSON.parse(localStorage.getItem("carreto")) || [];
+            carreto.push(producte);
+            localStorage.setItem("carreto", JSON.stringify(carreto));
+
+            document.getElementById("missatge").innerText = "Producte afegit al carretó!";
+        }
+    </script>
+    <a href="carrito.html">
+    <button>🛒 Carretó</button>
+</a>
+    <a href="menu.html">
+    <button>🏠 Tornar al menú</button>
+</body>
+</html>
