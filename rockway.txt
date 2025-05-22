@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>smartGyro Rockway PRO EVO</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <div id="producte">
+        <div class="imatge">
+            <img src="https://smartgyro.es/16965-large_default/patinete-electrico-smartgyro-rockway-pro-evo.jpg" alt="smartGyro Rockway PRO EVO">
+        </div>
+        <div class="info">
+            <h1>smartGyro Rockway PRO EVO</h1>
+            <p class="preu">749,00 €</p>
+            <h2>Característiques</h2>
+            <ul>
+                <li>Permés a major de 18 anys</li>
+                <li>Motor: 1000W</li>
+                <li>Velocitat màxima: 25 km/h</li>
+                <li>Autonomia: 60 km</li>
+                <li>Batería: 15Ah</li>
+                <li>Pantalla LCD</li>
+                <li>Suspensió doble</li>
+                <li>frenada regenerativa</li>
+                <li>Llums davanteres i traseres</li>
+                <li>Disseny plegable</li>
+             </ul>
+            <button class="afegir" onclick="afegirAlCarreto()">Afegir al carretó</button>
+            <div class="missatge" id="missatge"></div>
+        </div>
+    </div>
+    <script>
+        function afegirAlCarreto() {
+            const producte = {
+                nom: "smartGyro Rockway PRO EVO",
+                preu: 749.00,
+                imatge: "https://smartgyro.es/16965-large_default/patinete-electrico-smartgyro-rockway-pro-evo.jpg"
+            };
+
+            let carreto = JSON.parse(localStorage.getItem("carreto")) || [];
+            carreto.push(producte);
+            localStorage.setItem("carreto", JSON.stringify(carreto));
+
+            document.getElementById("missatge").innerText = "Producte afegit al carretó!";
+        }
+    </script>
+    <a href="carrito.html">
+    <button>🛒 Carretó</button>
+</a>
+    <a href="Html index.html">
+    <button>🏠 Tornar al menú</button>
+</body>
+</html>

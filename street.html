@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>smartGyro Street</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <div id="producte">
+        <div class="imatge">
+            <img src="https://smartgyro.es/16965-large_default/patinete-electrico-smartgyro-rockway-pro-evo.jpg" alt="smartGyro Street">
+        </div>
+        <div class="info">
+            <h1>smartGyro Street</h1>
+            <p class="preu">649,00 €</p>
+            <h2>Característiques</h2>
+            <ul>
+                <li>Certificat de la DGT</li>
+                <li>Motor: 500W</li>
+                <li>Velocitat màxima: 25 km/h</li>
+                <li>Autonomia: 50 km</li>
+                <li>Batería: 13,5Ah</li>
+                <li>Pantalla LCD</li>
+                <li>Suspensió doble</li>
+                <li>Llums davanteres i traseres</li>
+                <li>Disseny plegable</li>
+             </ul>
+            <button class="afegir" onclick="afegirAlCarreto()">Afegir al carretó</button>
+            <div class="missatge" id="missatge"></div>
+        </div>
+    </div>
+    <script>
+        function afegirAlCarreto() {
+            const producte = {
+                nom: "smartGyro Street",
+                preu: 649.00,
+                imatge: "https://smartgyro.es/16965-large_default/patinete-electrico-smartgyro-rockway-pro-evo.jpg"
+            };
+
+            let carreto = JSON.parse(localStorage.getItem("carreto")) || [];
+            carreto.push(producte);
+            localStorage.setItem("carreto", JSON.stringify(carreto));
+
+            document.getElementById("missatge").innerText = "Producte afegit al carretó!";
+        }
+    </script>
+    <a href="carrito.html">
+    <button>🛒 Carretó</button>
+</a>
+    <a href="Html index.html">
+    <button>🏠 Tornar al menú</button>
+</body>
+</html>
