@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Kukirin G2</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        #producte {
+            padding: 2vmax;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #producte img {
+            width: 30vmax;
+            height: 20vmax;
+            object-fit: cover;
+            border-radius: 1vmax;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .preu {
+            font-size: 2vmax;
+            margin-top: 1vmax;
+            color: #521761;
+        }
+
+        .afegir {
+            margin-top: 2vmax;
+            padding: 1vmax 2vmax;
+            font-size: 1.5vmax;
+            background-color: #8e7cc3;
+            color: white;
+            border: none;
+            border-radius: 1vmax;
+            cursor: pointer;
+        }
+
+        .afegir:hover {
+            background-color: #7657a6;
+        }
+
+        .missatge {
+            margin-top: 1vmax;
+            color: green;
+            font-size: 1.2vmax;
+        }
+    </style>
+</head>
+<body>
+    <div id="producte">
+        <h1>Kukirin G2</h1>
+        <img src="https://kukirin.es/wp-content/uploads/2024/06/KuKirin-G2.jpg" alt="Kukirin G2">
+        <p class="preu">Preu: 499.00 €</p>
+        <p>Patinet elèctric amb autonomia de 50 km, suspensió doble i disseny plegable.</p>
+        <button class="afegir" onclick="afegirAlCarreto()">Afegir al carretó</button>
+        <div class="missatge" id="missatge"></div>
+    </div>
+
+    <script>
+        function afegirAlCarreto() {
+            const producte = {
+                nom: "Kukirin G2",
+                preu: 499.00,
+                imatge: "imatges/kukirin-g2.jpg"
+            };
+
+            let carreto = JSON.parse(localStorage.getItem("carreto")) || [];
+            carreto.push(producte);
+            localStorage.setItem("carreto", JSON.stringify(carreto));
+
+            document.getElementById("missatge").innerText = "Producte afegit al carretó!";
+        }
+    </script>
+    <a href="carreto.html">
+    <button>🛒 Carretó</button>
+</a>
+    <a href="menu.html">
+    <button>🏠 Tornar al menú</button>
+</body>
+</html>
