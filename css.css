@@ -64,8 +64,8 @@
 }
  #producte {
             display: flex;
-            gap: 4vmax;
-            padding: 4vmax;
+            gap: 3.5vmax;
+            padding: 3.5vmax;
             font-family: sans-serif;
             align-items: flex-start;
             flex-wrap: wrap;
