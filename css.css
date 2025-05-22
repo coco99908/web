@@ -152,3 +152,16 @@
             margin-top: 2vmax;
             font-weight: bold;
         }
+        .eliminar {
+            padding: 0.5vmax 1vmax;
+            font-size: 1.2vmax;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 0.5vmax;
+            cursor: pointer;
+}
+
+        .eliminar:hover {
+            background-color: #cc0000;
+}
