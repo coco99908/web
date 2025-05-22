@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Carretó de la compra</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="carreto">
+        <h1>Carretó de la compra</h1>
+        <div id="llista"></div>
+        <div class="total" id="total"></div>
+    </div>
+
+    <script>
+        const carreto = JSON.parse(localStorage.getItem("carreto")) || [];
+        const llista = document.getElementById("llista");
+        const totalElement = document.getElementById("total");
+
+        let total = 0;
+
+        if (carreto.length === 0) {
+            llista.innerHTML = "<p>No hi ha productes al carretó.</p>";
+        } else {
+            carreto.forEach(producte => {
+                total += producte.preu;
+
+                const div = document.createElement("div");
+                div.className = "producte";
+
+                div.innerHTML = `
+                    <img src="${producte.imatge}" alt="${producte.nom}">
+                    <div class="detalls">
+                        <h2>${producte.nom}</h2>
+                        <p>Preu: ${producte.preu.toFixed(2)} €</p>
+                    </div>
+                `;
+                llista.appendChild(div);
+            });
+
+            totalElement.innerText = `Total: ${total.toFixed(2)} €`;
+        }
+    </script>
+</body>
+</html>

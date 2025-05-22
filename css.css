@@ -22,7 +22,7 @@
     flex: 1;
     font-size: 2vmax;
     padding: 1vmax;
-    margin: 1;
+    margin: 0;
     height: 100%;
     border: none;
     background-color: #8e7cc3;
@@ -122,4 +122,33 @@
             margin-top: 1vmax;
             color: green;
             font-size: 1.2vmax;
+        }
+#carreto {
+            padding: 2vmax;
+            font-family: sans-serif;
+        }
+
+        .producte {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2vmax;
+            gap: 2vmax;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1vmax;
+        }
+
+        .producte img {
+            width: 10vmax;
+            height: 7vmax;
+            object-fit: cover;
+        }
+
+        .detalls {
+            flex: 1;
+        }
+
+        .total {
+            font-size: 2vmax;
+            margin-top: 2vmax;
+            font-weight: bold;
         }
