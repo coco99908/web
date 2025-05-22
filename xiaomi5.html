@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Xiaomi Electric 5</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <div id="producte">
+        <div class="imatge">
+            <img src="https://i05.appmifile.com/410_item_es/16/05/2023/27cb3d358b3c5ebf2fe5836e1f08bcce.png?thumb=1&w=220&f=webp&q=85https://i05.appmifile.com/739_item_es/11/02/2025/c00f684dbe0ce489e895b6cc6de87a00.png?thumb=1&w=220&f=webp&q=85" alt="Xiaomi Electric 5">
+        </div>
+        <div class="info">
+            <h1>Xiaomi Electric 5</h1>
+            <p class="preu">359,00 €</p>
+            <h2>Característiques</h2>
+            <ul>
+                <li>Motor: 700W</li>
+                <li>Velocitat màxima: 25 km/h</li>
+                <li>Autonomia: 60 km</li>
+                <li>Batería: 275,4Wh 7,65Ah</li>
+                <li>Pantalla LCD</li>
+                <li>Llums davantera automatica i traseres</li>
+                <li>Esmorteidors dobles davantrs</li>
+                <li>Frenada regenerativa</li>
+                <li>Disseny plegable</li>
+            </ul>
+            <button class="afegir" onclick="afegirAlCarreto()">Afegir al carretó</button>
+            <div class="missatge" id="missatge"></div>
+        </div>
+    </div>
+
+    <script>
+        function afegirAlCarreto() {
+            const producte = {
+                nom: "Xiaomi Electric 5",
+                preu: 359.00,
+                imatge: "https://i05.appmifile.com/739_item_es/11/02/2025/c00f684dbe0ce489e895b6cc6de87a00.png?thumb=1&w=220&f=webp&q=85"
+            };
+
+            let carreto = JSON.parse(localStorage.getItem("carreto")) || [];
+            carreto.push(producte);
+            localStorage.setItem("carreto", JSON.stringify(carreto));
+
+            document.getElementById("missatge").innerText = "Producte afegit al carretó!";
+        }
+    </script>
+    <a href="carrito.html">
+    <button>🛒 Carretó</button>
+</a>
+    <a href="menu.html">
+    <button>🏠 Tornar al menú</button>
+</body>
+</html>
