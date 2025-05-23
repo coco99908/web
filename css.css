@@ -76,9 +76,10 @@
         }
 
         .imatge img {
-            width: 25vmax;
-            height: 18vmax;
-            object-fit: contain;
+            width: 90%;
+            max-width: 90%;
+            height: auto;
+            object-fit: cover;
             border-radius: 1vmax;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
