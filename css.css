@@ -57,7 +57,7 @@
 
 .modelo img {
     width: 25vmax;
-    height: 18vmax;
+    height: 17vmax;
     object-fit: cover;
     border-radius: 1vmax;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
